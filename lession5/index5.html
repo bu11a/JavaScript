@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <button>Plus</button>
+        <button>Minus</button>
+        <button>Minus</button>
+    </div>
+    <h1>Счет: 0</h1>
+    <script>
+        // const btn = document.getElementById("btn")
+        const counter = document.querySelector("h1")
+        const container = document.querySelector(".container")
+        let cnt = 0
+
+        container.addEventListener("click ", function (event) {
+            if (event.target.textContent === "Plus") {
+                cnt++
+            }
+            else if (event.target.textContent === "Minus") {
+                if (cnt <= 0) {
+                    return
+                }
+                cnt--
+            }
+            
+            counter.textContent = `Счет: ${cnt}`
+        })
+        // btn.addEventListener("click", function(){
+        //     cnt++
+        //     counter.textContent = `Счет: ${cnt}`
+        // })
+    </script>
+</body>
+</html>

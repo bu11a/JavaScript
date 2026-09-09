@@ -1,0 +1,30 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    padding: 30px;
+    background-color: rgb(255, 0, 0);
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+input, textarea, select, button {
+    padding: 10px;
+    font-size: 16px;
+}
+button{
+    cursor: pointer;
+}
+.card{
+    width: 350px;
+    padding: 30px;
+    border-radius: 15px;
+    border: black;
+    background-color: white;
+}

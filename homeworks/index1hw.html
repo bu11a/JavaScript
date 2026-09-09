@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <link rel="stylesheet" href="style1hw.css">
+</head>
+<body>
+
+    <h1>Интерактивная карточка состояния</h1>
+
+    <div id="card" class="card calm">
+        <h2 id="stateText">Спокойно</h2>
+        <p>Текущее состояние системы</p>
+    </div>
+
+    <div class="buttons">
+        <button data-state="calm">Спокойно</button>
+        <button data-state="warning">Внимание</button>
+        <button data-state="stop">Стоп</button>
+    </div>
+
+    <p class="instruction">
+        Нажмите кнопку, чтобы изменить состояние.<br>
+        Двойной клик по карточке или клавиша Escape возвращают начальное состояние.<br>
+        Правый клик по карточке меняет цвет фона.
+    </p>
+
+    <script src="script1hw.js"></script>
+</body>
+</html>
