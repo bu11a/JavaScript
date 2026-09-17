@@ -2,11 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style9.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Post Manager</h1>
+
+        <div class="form">
+            <input type="text"
+                id="titleInput"
+                placeholder="Enter title"
+            >
+            <textarea id="bodyInput" placeholder="Description"></textarea>
+            <button id="addPostBtn">Add</button>
+        </div>
+        <h2>Posts:</h2>
+        <div class="posts"></div>
+    </div>
+
     <script src="script9.js"></script>
 </body>
 </html>
