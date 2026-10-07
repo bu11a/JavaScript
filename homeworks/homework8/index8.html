@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style8.css">
+</head>
+<body>
+
+    <h1>Пользователи</h1>
+
+    <div class="users">
+
+        <div class="card">
+            <h2>Алексей</h2>
+            <p>Возраст: 18</p>
+            <button class="more" data-id="0">Подробнее</button>
+        </div>
+
+        <div class="card">
+            <h2>Мария</h2>
+            <p>Возраст: 20</p>
+            <button class="more" data-id="1">Подробнее</button>
+        </div>
+
+        <div class="card">
+            <h2>Данил</h2>
+            <p>Возраст: 19</p>
+            <button class="more" data-id="2">Подробнее</button>
+        </div>
+
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="close" id="close">✕</button>
+
+            <h2 id="modalName"></h2>
+            <p id="modalInfo"></p>
+
+            <button id="closeButton">Закрыть</button>
+        </div>
+    </div>
+
+    <script src="script8.js"></script>
+</body>
+</html>

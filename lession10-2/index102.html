@@ -9,7 +9,14 @@
 <body>
     <header>
     <h1>Online-store</h1>
-
+    <button class="favorite" id="favorite">Favorite</button>
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h2>Модальное окно</h2>
+            <div class="favoriteItems"></div>
+            <button id="closeModal">Закрыть</button>
+        </div>
+    </div>
     <a href="./cartPage.html" class="cart-link">Корзина(<span id="cartCount">0</span></a>
     </header>
     <main>
@@ -27,8 +34,14 @@
     <section id="products" class="products">
 
     </section>
+    <div class="modal" id="productDetail">
+        <button id="closeProduct">Закрыть</button>
+        <div class="productModal">
+        </div>
+    </div>
 
     <script type="module" src="js/main.js"></script>
+    <script src="js/favorite.js" type="module"></script>
    
 </body>
 </html>

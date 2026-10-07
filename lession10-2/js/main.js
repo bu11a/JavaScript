@@ -1,6 +1,7 @@
 import { getProducts } from "./api.js";
-import { renderProducts } from "./products.js";
+import { renderProducts, renderProductDetail } from "./products.js";
 import { addToCart, getCartCount } from "./cart.js";
+import { addToFavorites } from "./favorite.js";
 
 const message = document.querySelector("#message")
 
@@ -10,6 +11,8 @@ const categorySelect = document.querySelector("#categorySelect")
 const productsContainer = document.querySelector("#products")
 
 const cartCount = document.querySelector("#cartCount")
+
+const closeProduct = document.querySelector("#closeProduct")
 
 
 let products = []
@@ -68,8 +71,8 @@ searchInput.addEventListener("input", filterProducts);
 categorySelect.addEventListener("change", filterProducts);
 
 productsContainer.addEventListener("click", function (event) {
+    const id = Number(event.target.dataset.id)
     if (event.target.classList.contains("add-cart")) {
-        const id = Number(event.target.dataset.id)
 
         const product = products.find(function (product) {
             return product.id === id;
@@ -80,8 +83,30 @@ productsContainer.addEventListener("click", function (event) {
             updateCartCount();
         }
     }
+    if (event.target.classList.contains("add-favorites")){
+        const product = products.find(function (product) {
+            return product.id === id;
+        });
+        console.log(product)
+        if (product) {
+            addToFavorites(product);
+        }
+    }
+    if (event.target.classList.contains("show-detail")) {
+        const product = products.find(function(product){
+            return product.id===id
+        })
+
+        if (product) {
+            renderProductDetail(product)
+        }
+    }
 });
 
 function updateCartCount() {
     cartCount.textContent = getCartCount();
 }
+
+closeProduct.addEventListener("click", function(event){
+    document.querySelector("#productDetail").classList.remove ("active")
+})
